@@ -1,0 +1,2 @@
+"0","deCV <- read_excel(""/home/alejandro/Documents/LCC/datasets/deCV.xlsx"")"
+"0","head(deCV)"

@@ -1,0 +1,490 @@
+---
+title: "Reglas de Asociación - Proyecto - consumo.csv"
+author: "Ángel Mora"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+output:
+prettydoc::html_pretty:
+theme: cayman
+highlight: github
+vignette: >
+\VignetteIndexEntry{Vignette Title}
+\VignetteEngine{knitr::rmarkdown}
+\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+
+
+# Calidad de las reglas - estimadores
+
+- evaluar la calidad de las reglas
+- seleccionar, filtrar entre todas las reglas las más interesantes según los distintos estimadores
+- ``interestMeasure``  calcula los valores de los estimadores para las reglas y en el conjunto de transacciones que se indiquen
+
+
+```{r,echo=TRUE, eval=FALSE}
+interestMeasure(rules, transactions = transactions.obj)
+
+rules.df <- cbind(rules.df,
+                  data.frame(interestMeasure(rules,
+                                             transactions = transactions.obj)))
+
+```
+
+
+
+## coverage
+
+
+
+- (o soporte LHS) es el soporte del lado izquierdo de la regla
+
+- representa una medida de la frecuencia con la que se puede aplicar la regla
+
+- se calcula a partir de  las  medidas de calidad de la regla (soporte y confianza) o utilizando los datos suministrados en las transacciones.
+
+
+```{r, echo=TRUE, eval=FALSE}
+library(arules)
+data("Income")
+rules <- apriori(Income)
+rules5 <- rules[1:5]
+inspect(rules5)
+coverage(rules5)
+quality(rules) <- cbind(quality(rules), coverage = coverage(rules))
+```
+
+
+## Redundancia
+
+>> En las reglas estimadas aparece una cantidad ingente de redundancia.
+
+```{r, echo=TRUE, eval=FALSE}
+is.redundant(rules)
+which(is.redundant(rules) )
+inspect(rules[c(11,18,24,29,31,36)])
+
+```
+
+
+Ejemplo:
+
+- Rule 1: {A, B} => {C}, confidence score 0.32
+- Rule 2: {A} => {C}, confidence score 0.45
+
+
+Rule 1 sería redundante.
+
+
+## Filtrar reglas
+
+
+```{r, echo=TRUE, eval=FALSE}
+subrules = rules[quality(rules)$confidence > 0.8]
+```
+
+
+
+## Reglas duplicadas
+
+
+
+```{r, echo=TRUE, eval=FALSE}
+duplicated(rules)
+```
+
+
+## Reglas significativas
+
+
+
+
+Para comprobar la independencia u ocurrencia de items en un conjunto de transacciones se usan estimadores como el test chi-cuadrado o la prueba de Fisher. ``arules`` usa el método ``is.significant`` para realizar una prueba de independencia de Fisher o chi-cuadrado (argumento de la función)
+
+
+```{r, echo=TRUE, eval=FALSE}
+is.significant(rules, transactions.obj, method = "fisher")
+```
+
+
+
+## Generación de transacciones aleatorias
+
+
+```{r, echo=TRUE, eval=FALSE}
+patterns = random.patterns(nItems = 1000)
+summary(patterns)
+trans = random.transactions(nItems = 1000, nTrans = 1000, method = "agrawal",  patterns = patterns)
+image(trans)
+```
+
+
+
+# Métodos Avanzados con reglas
+
+```{r, echo=TRUE}
+library(arules)
+data("Groceries")
+class(Groceries)
+```
+
+
+
+
+```{r,eval=FALSE, echo=TRUE}
+Groceries[1]
+inspect(Groceries[1])
+is.subset("citrus fruit",Groceries[1])
+```
+
+>> el comando ``is_subset`` da error: estamos mezclando caracteres con transacciones.
+
+>> tenemos que convertir el producto o los productos a transacciones
+
+```{r, echo=TRUE}
+#is.subset("citrus fruit",Groceries[1])
+lista_items1 <- c("dishes")
+lista_items1
+items_trans1 <- new("itemsets",
+                    items = encode(list(lista_items1),
+                                   itemLabels = itemLabels(Groceries))
+)#end new
+items_trans1
+inspect(items_trans1)
+incluido <- is.subset(items_trans1,Groceries[1])
+incluido
+
+lista_items2 <- c("tropical fruit")
+
+items_trans2 <- new("itemsets",
+                    items = encode(list(lista_items2),
+                                   itemLabels = itemLabels(Groceries))
+)#end new
+
+
+inspect(items_trans2)
+incluido <- is.subset(items_trans2,Groceries[1])
+incluido
+as.logical(incluido)
+
+
+
+lista_items2 <- c("water")
+
+items_trans2 <- new("itemsets",
+                    items = encode(list(lista_items2),
+                                   itemLabels = itemLabels(Groceries))
+)#end new
+
+
+inspect(items_trans2)
+incluido <- is.subset(items_trans2,Groceries[1])
+
+```
+
+
+>> desarrollamos alguna función para manejar los items en las transacciones
+
+
+```{r, echo=TRUE}
+mi.size <- function(x){
+  longitud <- sum(x[1]@data)
+  return(longitud)
+}
+
+mis.productos.longitud <- function(x){
+  longitud <- sum(x[1]@data)
+  productos <- itemLabels(x)[which(x[1]@data)]
+  return(list(length=longitud, prod=productos ))
+}
+
+mis.productos.longitud(Groceries[1])
+
+
+mi.size(Groceries[1])
+
+```
+
+
+
+## Conversiones de tipos
+
+>> pasar el dataset a formato matrix y a lista el dataset *Groceries* (para manejar mejor lo que hay en el dataset)
+
+  - as(dataset,"transactions")
+  - as(dataset,"matrix")
+
+Las funciones de conversión también funcionan para la parte izquierda o derecha de una regla
+
+  - as(lhs(R1),"list")  (pasar la parte izquierda de una regla - R1)
+
+
+
+```{r, echo=TRUE}
+l1 <- as(Groceries[1],"list")
+l1
+```
+
+
+## Operaciones con conjuntos de reglas
+
+* Buscar en la ayuda de ``arules`` - sets  (operaciones con conjuntos):
+
+```
+union(x, y)
+intersect(x, y)
+setequal(x, y)
+setdiff(x, y)
+is.element(el, set)
+```
+
+```{r, echo=TRUE}
+rules <- apriori(Groceries,parameter = list(sup=0.001))
+
+## Cogemos dos subconjuntos
+n <- length(rules)
+mitad <- n %/% 2
+
+r1 <- rules[1:mitad]
+r1
+r2 <- rules[(mitad+1):n]
+r2
+union(r1,r2)
+intersect(r1,r2)
+setequal(r1,r2)
+setdiff(r1, r2)
+
+```
+
+
+
+
+## Filtrado de reglas
+
+  - lhs()
+  - rhs()
+  - subset
+
+Estos operadores permiten filtrar reglas que cumplan ciertas condiciones.
+
+
+```{r, echo=TRUE}
+der <- rhs(rules[1])# primera regla, la parte derecha
+
+inspect(der)
+
+der1_10 <- rhs(rules[1:10])# primeras 10 partes izquierdas de las  reglas
+inspect(der1_10)
+
+```
+
+
+
+Filtrar (hacer ``inspect`` para ver la diferencia):
+
+
+```{r, echo=TRUE}
+
+rules
+rules.sub1 <- subset(rules, subset = lhs %in%
+  c("margarine","butter"))
+rules.sub1
+rules.sub2 <- subset(rules, subset = lhs %ain%
+  c("margarine","butter"))
+rules.sub2
+rules.sub3 <- subset(rules, subset = lhs %pin%
+  c("milk"))
+rules.sub3
+
+```
+
+
+Los operadores usados en el filtrado:
+
+```
+%in%
+signature(x = "itemMatrix", table = "character"); matches the strings in table against the item labels in x and returns a logical vector indicating if a row (itemset) in x contains any of the items specified in table. Note that there is a %in% method withsignature(x = "itemMatrix", table = "character"). This method is described in together with match.
+
+%ain%
+signature(x = "itemMatrix", table = "character"); matches the strings in table against the item labels in x and returns a logical vector indicating if a row (itemset) in x contains all of the items specified in table.
+
+%oin%
+signature(x = "itemMatrix", table = "character"); matches the strings in table against the item labels in x and returns a logical vector indicating if a row (itemset) in x contains only items specified in table.
+
+%pin%
+signature(x = "itemMatrix", table = "character"); matches the strings in table against the item labels in x (using partial matching) and returns a logical vector indicating if a row (itemset) in x contains any of the items specified in table.
+
+```
+
+
+
+## Funciones manejo de itemsets
+
+Os paso algunas funciones interesante para manejar los atributos de las reglas - son parte de nuestro paquete de implicaciones.
+
+**Siempre interesa modularizar, pensar en funciones que luego puedas usar. Divide y vencerás **
+
+
+```{r, echo=TRUE}
+
+is.singleton <- function(X){
+  return(sum(X[1]@data)==1)
+}#End is.singleton
+
+union.sets <- function(X,Y){
+  if (!is.empty.S4(Y) &
+    !is.empty.S4(X))
+    return(itemUnion(X,Y))
+  else if (!is.empty.S4(Y))
+    return(Y)
+  else
+    return(X)
+}#End union.sets
+
+intersection.sets <- function(X,Y){
+  if (!is.empty.S4(Y) &
+    !is.empty.S4(X))
+    return(itemIntersect(X,Y))
+  else if (is.empty.S4(Y))
+    return(Y)
+  else
+    return(X)
+}#End intersection.sets
+
+difference.sets <- function(X,Y){
+  if (!is.empty.S4(Y) &
+    !is.empty.S4(X))
+    return(itemSetdiff(X,Y))
+  else
+    return(X)
+}#End difference.sets
+
+is.included <- function(X,Y){
+  return(is.subset(X, Y, proper=FALSE, sparse=FALSE))
+}#End is.included
+
+is.included.proper <- function(X,Y){
+  return(is.subset(X, Y, proper=TRUE, sparse=FALSE))
+}#End is.included
+
+is.empty <- function(X){
+  return(size(X)==0)
+}#End is.empty
+
+is.empty.set <- function(X){
+  return(length(X[[1]])==0)
+}#End is.empty.set
+
+is.empty.S4 <- function(X){
+  identical(size(X),integer(0))
+}
+
+equals.sets <- function(X,Y){
+  return(setequal(X,Y))
+}#End equals.sets
+
+```
+
+
+
+
+
+```{r, echo=TRUE}
+data("Groceries")
+class(Groceries)
+rules<-apriori(Groceries,parameter=list(supp=0.001))
+der <- rhs(rules[1])# primera regla, la parte derecha
+inspect(der)
+is.empty(der)
+```
+
+
+
+
+
+
+
+# Proyecto - Análisis de consumo de productos de una empresa.
+
+>> dataset  **consumo.csv** de productos comprados en una gran cafetería
+
+
+
+> 1. Descargar a local el dataset **consumo.csv** (en CV).
+
+
+> 2 Calcula  cuántos  compradores distintos hay en el dataset.
+
+
+> 3 Calcula  cuántos  productos distintos se han vendido. ¿Cuales son los 10 más vendidos? Visualiza con algún gráfico.
+
+```{r}
+```
+
+> 4. Separa la fecha en año, mes y día. Obten qué años, meses y días hay  más ventas con el objetivo de tener más personal en esas fechas. Visualiza las ventas acumuladas por meses.
+
+> 5. Usa **split** para construir a partir de dataset una lista con nombre *lista.compra.usuarios* en la que cada elemento de la lista es cada comprador junto con todos los productos que ha comprado
+
+Este paso es crucial para poder extraer posteriormente las reglas de asociación.
+
+El resultado debe ser similar al siguiente:
+
+```{r,eval=FALSE,echo=TRUE}
+class(lista.compra.usuarios)
+#[1] "list"
+lista.compra.usuarios[1:2]
+$`1`
+[1] Pan
+...
+
+$`2`
+[1] Refresco
+[2] Salmón
+...
+
+```
+
+> 6. Hacer **summary** de *lista.compra.usuarios*
+
+```{r}
+```
+
+> 7. Contar cuántos usuarios hay en la lista  *lista.compra.usuarios*
+
+> 8. Convertir a tipo de datos transacciones. Guardar en Tlista.compra.usuarios.
+
+> 9. Hacer **inspect** de los dos primeros valores de Tlista.compra.usuarios.
+
+> 10. Generar las reglas de asociación con 80% de confianza y 15% de soporte.  (varias estos úmbrales si no son adecuadas las reglas que obtienes - demasiadas y no acaba o pocas)
+
+
+> 11. Ver las reglas generadas y ordenalas por lift. Guarda el resultado en una variable nueva.
+
+> 12. Elimina todas las reglas redundantes. Calcula el % de reglas redundantes que había.
+
+> 13. Quedate con las reglas que son significativas.
+
+> 14. Buscar ayuda de **itemFrequencyPlot** para visualizar las 10 transacciones más frecuentes.
+
+
+
+> 15. Crea un dataframe (dos columnas - número de productos, lista de productos como texto) con la información de cada transacción.
+
+>> CONCLUSIONES:
+
+* ¿Cuales son los productos más vendidos?
+
+* Explica alguna regla e indica si este conocimiento te haría cambiar tu política de ventas para obtener más beneficios.
+
+* ¿Cómo incrementar ventas?
+
+
+
+

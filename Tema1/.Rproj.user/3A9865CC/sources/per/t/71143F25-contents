@@ -1,0 +1,355 @@
+---
+title: "Parcial1"
+output: pdf_document
+---
+
+---
++ [Caso Práctico 1 La Catequista Indiscreta](#caso-práctico-1-la-catequista-indiscreta)
++ [KEY TERMS](#key-terms)
++ [Sección 1 Conceptos](#sección-1-conceptos)
++ [Sección 2 Tratamiento de los datos (que es y cuál es su rol)](#sección-2-tratamiento-de-los-datos-que-es-y-cuál-es-su-rol)
++ [Sección3 Principios del tratamiento](#sección3-principios-del-tratamiento)
++ [Sección4 Derechos del Interesado](#sección4-derechos-del-interesado)
++ [Sección5 Deberes del Responsable y el Encargado del Tratamiento](#sección5-deberes-del-responsable-y-el-encargado-del-tratamiento)
++ [Sección 6 Seguridad, Análisis de Riesgos y Evaluación de Impacto](#sección-6-seguridad-análisis-de-riesgos-y-evaluación-de-impacto)
+---
+
+## Caso Práctico 1: La Catequista Indiscreta
+
+---
+* Sacrist  de igls lutr  
+	+ Página web para la parroquia 
+	+ Paginas con la info de 3º, sin consenetimiento
+* Trat autom incluye también el acceso público a la info -> no solo a la manipulación de la info.
+* La sensibilidad dde la info, naturaleza de la misma
+---
+
+## KEY TERMS
+
+1.  AEPD -\> Agencia Española de Protec Datos -\> Autoridad de control para RGPD
+
+2.  Perfil:
+
+3.  Elaboración de perfiles: cualquier forma de tratamiento automatizado de datos personales que consista en utilizar esos datos para evaluar ciertos aspectos personales de una persona física, en particular para analizar o predecir aspectos relativos al rendimiento laboral, situación económica, salud, preferencias personales, intereses, fiabilidad, comportamiento, ubicación o movimientos.
+
+4.  "categoría especial de datos" -\> hace referencia a aquellos datos personales que revelan información sobre la salud, la raza u origen étnico, las opiniones políticas, las creencias religiosas o filosóficas, la afiliación sindical, la orientación sexual, los datos genéticos o biométricos
+
+¡
+
+## Sección 1: Conceptos
+
+1.  Conflito que regula el derecho
+    -   Para personas físicas, quieran que sus datos, información relat a su persona inters a terceras. Regula el conflicto de interres entre los terceros y las personas físicas
+    -   Intimidad vs Privacidad:
+2.  Que leyes regulan en españa
+    -   RGPD -\> UE
+    -   LOPDGDD
+3.  ¿Organo encargado de hacer cumplir estas normas?
+    -   No hay un único
+    -   Uno européo (dictámenes), comunidades autónomas de ámbito local a la autonomía
+4.  Es la AEPD quien en última instancia interpreta y aplica el Derecho de protección de datos?
+    -   No es quien más manda
+    -   Audiencia nacional, Supremo, están por encima. Pueden contradecir a la AEPD
+    -   ¿Y el trib europeo (recursos)?
+5.  ¿Qué sanciones puede imponer la AEPD a quienes no cumplan las normas?
+    -   Se castiga con multas enre 20 M y 4% del max vol de negocio anual. Además de limitaciones temporales del tramtemientos de datos, o prohibir el uso de los datos; y ordenar la rectificación o supres de los datos personales
+    -   Multa, Apercibimiento, Cesación
+6.  ¿Como se determina la cuantía
+    -   En función de ciertos criterios establecidos en el RGPD:
+        -   Como la naturaleza, gravedad y duración de la infracción
+        -   El número de personas afectadas.
+        -   El nivel de intencionalidad o negligencia .
+        -   La naturaleza de los datos afectados y el tipo de datos personales tratados.
+        -   Se tienen en cuenta otros factores como la cooperación del responsable del tratamiento con la autoridad de protección de datos, la adopción de medidas correctivas y la capacidad financiera del responsable del tratamiento.
+7.  ¿Puede la AEPD ordenar que se pague una compensación a una persona lesionada en sus derechos? IMPORTANTE
+    -   NOO!!
+    -   El dinero al Tesoro público
+    -   El dinero se destinará destinado a la persona sii se reclama a daños y perjuicios, tribunales públicos. Abrá casos en los que -\> (Daños \^ Protección) ... 01, 10
+8.  ¿Puede la AEPD condenar a penas de cárcel a quienes infrinjan los preceptos de la LOPDGDD?
+    -   NOOOOO
+    -   ES UN ORGANO ADMINISTRATIVO
+9.  ¿Y qué conductas relativas a los datos personales están descritas en el Código Penal?
+    -   Robo de datos, y/o manipulacion de datos con perjuicio de terceros
+    -   No solo la revelación
+10. Y la difusión de imágenes intimas, ¿está castigada en el Código Penal?
+    -   Anuencia = Consentimiento
+    -   Si, revelar difundir, o ceder a terceros sin autoriz
+    -   Es de los casos capaz de causar Infracccion de -\> Protección de datos, Daños y perjuicios, carcel
+
+## Sección 2: Tratamiento de los datos (que es y cuál es su rol)
+
+1.  ¿Qué datos se consideran personales?
+    -   Dato = Dato Personal = Información "atómica" relac a una persona física identificada y/o identificable.
+    -   Se considera dato sii soy capaz de identificar la persona física.
+2.  ¿Qué se entiende por seudonimización?
+    -   Tratar la info de tal manera que para identificar la persona física sea necesario información de terceros.
+    -   NO se consideran ANÓNIMOS. Una información anónima, no es vinculable ni rastreable de forma alguna.
+3.  ¿Dirección de correo? ¿Direcciones IP? ¿Imágenes?
+    -   Si. Si. Sí, el almacenamiento de las mismas implica trat de la data (personas reconocibles)
+4.  ¿Categorías de los datos Personales?
+    -   Tendenciás ideológicas, salud, fisico, sexualidad.
+5.  ¿Qué se entiende por tratamiento de datos?
+    -   Cualquier operación, automatizada o no, de los datos.
+    -   Recogida, registro, estruc conserv, supr elminac.
+6.  ¿A qué tratamientos de datos se aplica el RGPD?
+    -   RGPD para cualquier trat, parc o total autom, de datos y ficheros
+    -   Ficheros -\> Cualquier conjunto de info estructurada
+7.  ¿Son aplicables las disposiciones del RGPD a todos los tratamientos de datos? (EXCEPCIONES)
+    -   No, existen excepciones
+    -   Ejercicio de uso personal y/o domestico, y, actividades de prevención de delitos
+    -   Activ pers o domestica, aquella que no tiene relación con activ empresariales
+8.  ¿Que es una actividad exclusivamente personal o doméstica?
+    -   Aquella que no tiene relación con alguna actividad profesional o comercial (correspondencia redes sociales)
+    -   Sumamente restrictiva para los tribunales y autoridades de control
+9.  ¿Cuales son los roles en el tratamiento de datos personales?
+    -   Solo tres (variables segun el contexto)
+        -   *Responsable*
+        -   *Interesado*
+        -   *Encargado*
+10. ¿Que entiende el RGPD por responsable de datos personales?
+    -   El RGPD define al responsable del tratamiento de datos personales como la persona física o jurídica, autoridad pública, agencia u otro organismo que, solo o junto con otros, determina los fines y medios del tratamiento de datos personales.
+11. ¿Que se entiende por interesado?
+    -   Se refiere a cualquier persona física identificada o identificable cuyos datos personales son objeto de tratamiento.
+12. ¿Qué se entiende en el RGPD por el encargado del tratamiento?
+    -   PERSONA FÍSICA/JURÍDICA, ORGANIZACIÓN -\> que trate los datos por cuenta del responsable del tratamiento -\> quien determina los fines y medios del tratamiento de los datos personales.
+    -   El encargado del tratamiento se refiere a la persona física o jurídica, entidad pública, agencia u otro organismo que trata datos personales en nombre del responsable del tratamiento. ![](./Screenshot%20from%202023-02-16%2016-39-44.png)
+
+## Sección3: Principios del tratamiento
+
+1.  ¿A qué obliga el principio de limitacion de la finalidad de los datos?
+    -   Los datos personales deben ser obtenidos para fines específicos y no pueden ser utilizados posteriormente de manera incompatible con estos fines
+    -   también implica que los datos personales deben ser eliminados cuando ya no sean necesarios para los fines para los que se recopilaron originalmente
+2.  ¿A qué obliga el principio de minimización de los datos?
+    -   Adecuados y ajustados a los fines
+3.  ¿A qué obliga el principio de exactitud de los datos?
+    -   Precisos y actualizados en relac a los fines para los que fueron recolectados
+    -   Los responsables del trat de los datos -\> med para suprim/rectif sin dilac datos personales inexactos a los fines para ls que fueron recolectados
+4.  ¿Aqué obliga el principio de limitación dele plazo de conservación de los datos?
+    -   El tiempo justo para el tratamiento
+    -   Responsables -\> def plazos de uso, pudiendo ser ampliado a modo de archivo
+5.  ¿A qué obliga el principio de integridad y confidencialidad de los datos?
+    -   Garantizar una seguridad adecuada ante:
+        -   perdidas
+        -   tratam no autoriz
+    -   APLICADO A CUALQUIER PERSONA QUE PARTICIPE DEL TRATAMIENTO DE LOS DATOS
+6.  ¿En que consiste el principio de legitimización del tratamiento?
+    -   El trat de los datos personales es licito sii se basa en una o varias bases legales del RGPD
+7.  ¿En que consiste el principio de responsabilidad proactiva?
+    -   El responsable del tratamiento será quién se ha de encargar del cumplimiento de los princip 1-6
+8.  ¿cuáles son loas bases de legitimización enunciadas en el RGPD?
+    -   Son 6, la principal *Consentimiento del interesado*
+        -   Consentimiento
+        -   Ejec de un contrato
+        -   Cumplim de una obligación
+        -   Protección de intereses
+        -   Misión de Interés Público
+        -   Interés Legítimo
+9.  ¿Qué se entiende por consentimiento?
+    -   Toda manifestación de voluntad, libre, específica, informada por la que el interesadoa acepta el tratamiento de datos personales que le conciernen
+    -   Através de declaración o acción afirmativa
+    -   NO PUEDE SER SUPUESTO NI TÁCITO
+10. ¿Da el RPD algunas indicaciones sobre cómo redactar la solicitud de consentimientos?
+    -   El RGPD establece que la solicitud de consentimiento debe ser clara e inteligible, distinguible de otros asuntos y en un lenguaje sencillo.
+    -   Se debe evaluar si el consentimiento se ha dado libremente, especialmente si la ejecución de un contrato se subordina a la aceptación del tratamiento de datos personales que no son necesarios para dicho contrato.
+11. ¿Se puede solicitar el consenntimiento vía formulario web?
+    -   Sí mientras que cumpla con los req anteriores
+12. ¿Cómo ha de ser el consentimiento para el tratamiento de categorías especiales de datos?
+    -   EXPLICITO Y CON UN FIN DETERMINADO
+    -   EN ESPAÑA -\> NO BASTA CON EL CONSENTIMIENTO NO BASTA PARA EL TRAT DE DATOS IDEOLOG SENSIBL
+13. ¿Se puede revocar el consentimiento?
+    -   Si en cualquier momento, ha de ser tan facil darlo como quitarlo
+    -   La retirada del consentimiento no afecta a la legalidad de los tratamientos que se hayan realizado previamente con ese consentimiento
+14. ¿Edad mínima para pestar el consentimiento al tratamiento de datos personales?
+    -   14 años
+    -   PAra menores de 14 el consentim será licito sii constan los tutores
+15. ¿A qué obliga el interés legítimo?
+    -   si una organización tiene un interés legítimo en procesar los datos personales de alguien, puede hacerlo sii ese interies no viole los derechos y libertades de la persona
+16. ¿Qué ejemplos RGPD?
+    -   El interes legítimo se dá cuando existe relac pertinente y apropiada entr interesado y responsable (el inte)
+    -   Prevención del fraude
+    -   Marketing directo
+17. ¿Cuáles son los casos en que se presume el interés legítimo según la LOPDGDD?
+    -   el tratamiento de datos de contacto y relativos al puesto de trabajo en una persona jurídica
+    -   el tratamiento de datos de empresarios individuales y profesionales liberales solo en dicha condición
+    -   el tratamiento de datos con el objetivo de evitar el envío de comunicaciones comerciales a personas que se hayan opuesto a recibirlas
+    -   Y bajo ciertas condiciones: el trat de datos relativos al incumplimiento de obligaciones financieras/dinerarias/...
+18. ¿Pueden los particulares instalar sistemas de videovigilancia, basándose en su interés legítimo?
+    -   Si pero ciñendose a unos requisitos
+    -   Entr otros:
+        -   solo captar el interior del domicilio
+        -   vía pública sii es para garantizar la seguridad de la vía pública y de forma imprescindible
+        -   Los datos han de ser destruidos en un plazo de un mes a no ser que se requiran para necesarios para acreditar sucesoa
+        -   Sol si es condicion única y excluyente para garantizar los intereses del indiv
+        -   EL DEBER DE INFORMACIÓN -\> DISPOSITIVOS INFORMATIVOS
+19. ¿Hay otras bases de legitimización?
+    -   ejecución de un contrato
+    -   obligación legal
+    -   interés vital
+    -   poderes públicos
+
+## Sección4: Derechos del Interesado
+
+1.  ¿Qué derecos tiene el interesado frente al responsable del tramtemiento?
+    -   el acceso, rectificación, supresión, oposición, por el RGPD (limitación y portabilidad) de sus datos
+    -   La LOPDGDD incluye el derecho al olvido para servicios de index y recuperacion de info ("derechos ARCO")
+2.  ¿En qué consiste el derecho de acceso?
+    -   Obtener DEL RESPONSABLE -\> info de si se están tratando o no datos personales que le conciernen
+    -   Derecho de auditoría de sus datos en caso afirmatuvo
+3.  ¿En que consiste el derecho de rectificación?
+    -   rectificar de forma inmediata la rectificación de los datos personales inexactos que le concierna
+4.  ¿En que consiste el derecho de supresión?
+    -   permite al interesado solicitar al responsable del tratamiento la eliminación de sus datos personales en ciertas circunstancias, (ya no son necesarios para los fines para los que se recopilaron, si se ha retirado el consentimiento, o los datos han sido tratados de forma ilícita)
+5.  ¿En qué consiste el derecho de oposición?
+    -   es aquel que otorga a los titulares de datos el poder de oponerse al tratamiento de sus datos personales en determinadas circunstancias
+    -   El responsable dejará de tratar datos, a no ser que acredite el motivo legítim ipmeriosos para no hacerlo
+    -   Si el objet del trat es mercadotecnia directa, el interesado tendrá derecho de oposición
+6.  ¿Qué se entiende por eleaboración de un perfil?
+    -   Toda forma de tratamiento automatizada de datos pers para evaluar determinados aspectos relativos a la persona (rendim laboral, pref pers, salud, ...)
+7.  ¿Que derechos tiene el interesado respecto a sus perfiles?
+    -   Oposición, no ser objeto de una decisión que produzca efectos jurídicos en él o le afecte significativamente (SOLO PARA TART AUTOMATIZADO)
+8.  ¿En que consiste el derecho de limitación?
+    -   REstringir el tratamiento de los datos cuando se dan:
+        -   Inpugnación por parte del interesado, en un cierto plazo
+        -   trat ilícito, donde el interesd se niega al a la supresion de los datos personales y solicite la limitación de los mismos
+9.  ¿Cómo puede el intersado ejercer estos derechos?
+    -   No requiere formalidad ni costes, el interesado se dirigirá al responsable por cualquier medio
+    -   El AEPD establece modelos para el ejercicio de estos derechos
+    -   Recurrir a los tribunales, asum costes por parte de los interesados
+10. ¿En qué consiste el derecho de portabilidad?
+    -   permite a los interesados solicitar y recibir sus datos personales en un formato estructurado, común y legible por máquina, y transferirlos a otro responsable del tratamiento sin impedimentos por parte del responsable al que se los había facilitado previamente
+11. ¿En que consiste el "derecho al olvido"?
+    -   permite a los interesados oponerse a la indexación de sus datos personales por parte de los buscadores web, incluso si son veraces y se han publicado en fuentes públicas
+    -   Es una manifestación del derecho de supresión u oposición y permite controlar la divulgación de datos personales en línea.
+12. ¿Reconoce la ley el derecho al olvido?
+    -   Si, la LOPDGDD establece el derecho al olvido ante los servicios de indexación y recuperación de la info
+    -   permite a toda persona solicitar a los motores de búsqueda en Internet que eliminen los enlaces publicados que contienen información relativa a esa persona si () son:
+        -   Inadecuados
+        -   Inexactos
+        -   No pertinentes
+        -   No actualizado o excesivos
+    -   Este derecho subsistirá aunque la información sea lícita y no se proceda a su borrado previo o simultáneo
+
+## Sección5: Deberes del Responsable y el Encargado del Tratamiento
+
+1.  ¿El responsable está obligado a facilitar al interesado alguna información cuando le solicite sus datos?
+    -   Incluyendo la identidad y datos de contacto del responsable
+    -   La finalidad y base jurídica del tratamiento
+    -   Los destinatarios de los datos personales
+    -   El plazo de conservación de los datos
+    -   Los derechos del interesado (acceso, rectificación, supresión, oposición, portabilidad y retirada del consentimiento)
+    -   El derecho a presentar una reclamación ante la autoridad de control, si la comunicación de los datos es un requisito legal o contractual
+    -   La existencia de decisiones automatizadas y la lógica aplicada.
+2.  ¿Cómo hay que facilitar toda esa info?
+    -   Con una dirección electrónica u otro medio que permita acceder a ella de forma sencilla e inmediata
+    -   Siempre ha de presentarse:
+        -   Identidad y datos de contacto del responsable
+        -   Finalidad del tratamiento
+        -   Legitimizacíon ![](Screenshot%20from%202023-02-18%2015-59-22.png)
+3.  ¿Y si los datos no se han obtenido directamente del interesado?
+    -   Se ha de proporcionar info de la fuente, y si es de naturaleza pública
+4.  ¿Hay algún caso en que no sea obligatorio propporcionar esta información?
+    -   SI EXISTEN CASOS:
+        -   El intersado ya dispone de ella
+        -   La comunicación de la información resulta imposible o suponga un esfuerzo desproporcionado (archivo de interes público o investigación)
+5.  ¿Quien está obligado a llevar un registro de actividades de tratamiento?
+    -   El responsable sobre las actividades de su esponsabilidad, y el encargado de las activ asoc a un responsable
+    -   Se aplica:
+        -   Tratamiento no ocasional
+        -   Emplee a 250 o más
+        -   Que el tratam suponga riesgo para los derechos y libertades del interesado
+        -   Que existan categorías especiales de datos personales, o datos relat a condenas e infracciones penales
+6.  ¿Qué debe contener el registro de actividades de tratamiento?
+    -   debe contener información detallada y actualizada sobre las actividades de tratamiento.
+    -   Entre ellos:
+        -   La identidad y los datos de contacto del responsable y, en su caso, del representante del responsable y del delegado de protección de datos.
+        -   Los fines del tratamiento y la base jurídica que lo legitima.
+        -   Las categorías de datos personales que se tratan.
+        -   Los destinatarios o las categorías de destinatarios a los que se comunican o se prevé comunicar los datos personales.
+        -   En su caso, las transferencias internacionales de datos y las garantías aplicables.
+        -   Los plazos previstos para la supresión de las diferentes categorías de datos.
+        -   Si es posible, una descripción general de las medidas de seguridad técnicas y organizativas aplicadas al tratamiento.
+        -   La descripción de las posibles violaciones de seguridad de los datos personales, así como las medidas adoptadas para abordarlas.
+        -   Cuando sea necesario, la descripción de los análisis de riesgo de protección de datos y las medidas que se han tomado para mitigar los riesgos identificados
+7.  ¿Qué se entiende por violación de la seguridad de los datos?
+
+-   Toda destrucción, pérdida o alteración accidental o ilícita de datos personales transmitidos, conservados o tratados de otra forma, o la comunicaci ́on o acceso no autorizados a dichos datos
+
+8.  ¿Qué debe hacer el responsable en caso de violación de seguridad?
+    -   Notificar a la AEPD, a menos que la violación sea improbable que entrañe un riesgo para los derechosy libertades. Se ha de comunicar un retraso superior a 72 horas
+    -   La AEPD "Gu ́ıa para la gesti ́on y notificaci ́on de las brechas de seguridad", la herramienta interactiva de ayuda "Asesora-Brecha".
+9.  ¿Debe hacer algo más el responsable en caso de violación de seguridad?
+    -   Documentarla: hechos, efectos y medidas adoptadas
+    -   Si se afectan derechos y libertades de personas físicas, se comunicará al interesado sin dilación indebida
+    -   Si la comunicación indiv es un esfuerzo despropporcionado, se adoptarán otras medidas (com pública, u otras como "Comunica-Brecha" de la AEPD)
+10. ¿Qué debe hacer el encargado en caso de violación de seguridad?
+    -   Notificar al responsable sin dilación indebida
+11. ¿Cómo se fijan los debberes y derechos del encargado del tratamiento?
+    -   Con un contrato que vincule al encargado con respecto al responsable y establezca el objetivo, duración, naturaleza y la finalidad del tratamiento, además del tipo de datos personales y categorías del interesado
+    -   Content -\> art 28 RGPD
+12. ¿En qué consiste la figura del delegado de protección de datos?
+    -   es una figura obligatoria en la normativa europea de protección de datos (RGPD)
+    -   Se trata de una persona encargada de supervisar el cumplimiento de la normativa de protección de datos en una organización y de actuar como intermediario entre la organización, los titulares de los datos y las autoridades de control
+    -   En ciertas circunstancias, la figura del DPO es obligatoria para ciertas organizaciones
+13. ¿Qué titulación académica debe tener un delegado de protección de datos?
+14. ¿Cómo puedo contactar con un delegado de protección de datos?
+    -   El contacto del mismo ha de ser público
+15. ¿Están obligados todos los responsables y encargados a designar un delegado de protección dee datos?
+    -   NO, ESTÁN OBLIG SII:
+        -   El trat corre a cuenta de un organismo público
+        -   Las actividades del responsable o encargado requieren observación sistemáticas de interesados a gran escala
+        -   Tratamiento a gran escala de categorías especiales de datos personales o datos relativos a condenas e infracciones.
+    -   La LOPDGDD establece un listado:
+        -   Los colegios profesionales.
+        -   Los centros docentes de cualquiera de los niveles establecidos en la legislación reguladora del derecho a la educación, así como las Universidades públicas y privadas
+        -   Las entidades que exploten redes y presten servicios de comunicaciones electrónicas.
+        -   Los prestadores de servicios de la sociedad de la información cuando elaboren a gran escala perfiles de los usuarios del servicio.
+        -   Los establecimientos financieros de crédito.
+        -   Las entidades aseguradoras y reaseguradoras.
+        -   Las empresas de servicios de inversión, reguladas por la legislación del Mercado de Valores.
+        -   Los distribuidores y comercializadores de energía el ́ectrica y los distribuidores y comercializadores de gas natural.
+        -   Las entidades responsables de ficheros comunes para la evaluación de la solvencia patrimonial y crédito.
+        -   Las entidades que desarrollen actividades de publicidad y prospecci ́on comercial cuando lleven a cabo tratamientos basados en las preferencias de los afectados o realicen actividades que impliquen la elaboración de perfiles de los mismos.
+        -   Los centros sanitarios legalmente obligados al mantenimiento de las historias clínicas de los pacientes. Se except ́uan los profesionales de la salud que, aun estando legalmente obli-gados al mantenimiento de las historias cl ́ınicas de los pacientes, ejerzan su actividad a título individual.
+        -   Las entidades que tengan como uno de sus objetos la emisi ́on de informes comerciales que puedan referirse a personas f ́ısicas.
+        -   Los operadores que desarrollen la actividad de juego a trav ́es de canales electrónicos, informáticos, telemáticos e interactivos.
+        -   Las empresas de seguridad privada.
+        -   Las federaciones deportivas cuando traten datos de menores de edad.
+
+## Sección 6: Seguridad, Análisis de Riesgos y Evaluación de Impacto
+
+1.  ¿Cuál es el principal deber del responsable del tratamiento?
+    -   Es la persona o entidad que decide cómo se procesarán los datos personales y con qué fines
+    -   El principal deber del responsable del tratamiento es garantizar que el procesamiento de los datos personales se lleve a cabo de manera legal, justa y transparente, de acuerdo con las leyes y regulaciones aplicables en materia de protección de datos personales
+2.  ¿En qué consiste la protección de datos desde el diseño?
+    -   Es un enfoque que busca incorporar medidas de privacidad en los productos y servicios desde el principio de su desarrollo.
+    -   Es un enfoque que busca incorporar medidas de privacidad en los productos y servicios desde el principio de su desarrollo, con el objetivo es garantizar la protección de los datos personales de los usuarios desde el inicio del proceso.
+3.  ¿En qué consiste la protección de datos por defeto?
+    -   Es un principio que establece que solo serán objeto de tratamiento aquellos datos personales que sean necesarios/esenciales para los fines del tratamiento.
+4.  ¿Cómo puede demostrar el responsable que ha aplicado las medidas apropiadas?
+    -   La adhesión a códigos de conducta o mecanosmos de certificación debidamente aprobados.
+5.  ¿Qué medidas son concretamente las que hay que adoptar?
+    -   El RGPD no define medidas concreta solo lo que han de satisfacer:
+        -   Seudonimización y cifrado de datos
+        -   Confidencialidad integridad disponibilidad y resilencia
+        -   Capacidad de restaurar disponibilidad y el acceso a los datos ![](Screenshot%20from%202023-02-18%2018-00-23.png)
+6.  Entonces ¿Qué hay que hacer para determinar las medidas concretas que se deben adoptar?
+    -   Las medidas SON EL RESULTADO DEL ANÁLISIS DE RIESGO.
+    -   Para los casos de tratamiento de bajo riesgo, la herramienta "Facilita" de la AEPD detecta estos casos de bajo riesgo y recomienda para ellos un conjunto de medidas. Además, "Facilita" genera la documentación necesaria para cumplir otros deberes.
+7.  ¿Que medidas recomienda "Facilita"?
+    -   La realización de evaluaciones de impacto en la protección de datos
+    -   La adopción de políticas de privacidad claras y concisas
+    -   La implementación de medidas de seguridad adecuadas para proteger los datos personales
+    -   La formación y concienciación del personal en materia de protección de datos
+    -   La designación de un delegado de protección de datos
+8.  ¿Y si el tratamiento no es detectado como de bajo riesgo y "Facilita" no es aplicable?
+    -   se debe realizar un análisis explícito de riesgos, y en los casos previstos por la ley, una evaluación de impacto, la AEPD ofrece una metodología para la elaboración de la EIPD
+    -   La EIPD es la Evaluación de Impacto en la Protección de Datos, una herramienta que permite identificar y evaluar los posibles riesgos y consecuencias que puede tener un tratamiento de datos personales en la privacidad y seguridad de los datos de los interesados
+9.  ¿Cuándo es obligaftorio realizar una evaluación de impacto previa al tratamiento?
+    -   cuando el tratamiento pueda entrañar un alto riesgo para los derechos y libertades de las personas físicas
+    -   En particular, el RGPD establece una lista:
+        -   Tratamientos automatizados de datos personales que impliquen la elaboración de perfiles o la toma de decisiones que afecten a derechos o produzcan efectos jurídicos en las personas.
+
+        -   Tratamiento a gran escala de datos sensibles (categorías especiales de datos) o datos personales relativos a condenas e infracciones penales.
+
+        -   Observación sistemática a gran escala de una zona de acceso público.
+10. ¿Podemos concretar algo más los casos en los que hay "un alto riesgo"? + La AEPD tiene una lista: [la lista](https://www.aepd.es/media/criterios/listas-dpia-es-35-4.pdf) + Casos principales

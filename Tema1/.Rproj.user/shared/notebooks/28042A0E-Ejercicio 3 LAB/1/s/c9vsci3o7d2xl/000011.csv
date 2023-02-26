@@ -1,0 +1,7 @@
+"0","deCV$`Documento de identidad` %>% 
+  rowwise() %>% 
+  toupper()
+"
+"2","Error in UseMethod(""rowwise"") : 
+  no applicable method for 'rowwise' applied to an object of class ""character""
+"

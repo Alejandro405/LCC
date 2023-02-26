@@ -1,0 +1,73 @@
+---
+title: "Ejercicio - Preprocesamiento de datasets"
+author: "A. Mora"
+date: "05/03/2021"
+output:
+html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+```
+
+# Ejercicio
+
+>> Preprocesamiento de dataset
+>> Análisis exploratorio
+>> R básico y/o dplyr
+
+Hacer un Rmd que resuelva el presente ejercicio:
+
+
+> Primero, importar del CV el fichero excel ``deCV.xlsx`` en carpeta **Datasets**.
+
+Tiene la estructura siguiente:
+
+```{r}
+deCV <- read_excel("/home/alejandro/Documents/LCC/datasets/deCV.xlsx")
+head(deCV)
+```
+
+En el Rmd que resuelve este ejercicio, coloca el código para:
+
+0. Eliminar columnas 1, 3, 4,5  y 6 del dataset.
+```{r}
+select(deCV, -c(1, 3, 4, 5, 6))
+```
+
+1. La columna con información  de la fecha de envio debe cambiarse por varias columnas: año, mes, dia, hora
+```{r}
+separate(deCV, col="Enviado el:", sep="[- ]", into=c("año_envío", "mes_envío", "dia_envio", "hora_envio"))
+
+```
+2. Cambiar el nombre de la información de las empresas: *empresa1,empresa2,empresa3*
+```{r}
+# rename
+lookup <- c(empresa1 = "Q01_empresa1", empresa2 = "Q02_empresa2", selecion3 = "Q03_selecion3")
+rename(deCV, all_of(lookup))
+```
+3. Cambiar el nombre de la columna con el dni: *DNI*
+```{r}
+rename(deCV, DNI = "Documento de identidad")
+```
+4. Convertir a mayúsculas los datos almacenados en  *DNI*
+```{r}
+deCV$`Documento de identidad` %>% 
+  rowwise() %>% 
+  toupper()
+```
+
+5. Eliminar la columna con nombre *Completado* pero sin usar índice la columna, usar su nombre.
+6. Hacer una función que se le pase cada columna y devuelva si contiene algún valor NA.
+7. Ordenar el dataset por nombre del alumno y guardarlo en **deCV**
+8. Seleciona de la columna del nombre los 5 primeros alumnos
+9. Selecciona el dataset correspondiente a los 5 primeros alumnos.
+10. Seleciona de la columna del nombre los  alumnos que están en las posiciones impares.
+11. Selecciona el dataset correspondiente a los  alumnos que están en las posiciones impares.
+12. Añadir una columna *num_empresas* que contenga cuantas empresas ha selecionado cada alumno.
+13. Haz una función que devuelva los índices  de la columna empresa1, empresa2, empresa3 que contienen valores NA.
+14. Calcular la media de las empresas seleccionadas por todos los alumnos a partir de la información recolectada en *num_empresas*
+15.  Calcular la media de aquellos valores de *num_empresas* que estén por encima de la media e indicar los nombres de los alumnos que superan esa media.
+16. Cambiar valores NA por 0 en todo el dataset
+
